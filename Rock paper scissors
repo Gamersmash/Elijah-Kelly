@@ -1,0 +1,293 @@
+namespace Rock__Paper__Scissors
+{
+    class Program
+    {
+        static int computersScore;
+        static int playersScore;
+        static int scoreToBeat;
+        static bool playerwon;
+        static void Main(string[] args)
+        {
+            Random RandomChoice = new Random();
+            Console.WriteLine("What do you want to play to?");
+            scoreToBeat = Convert.ToInt32(Console.ReadLine());
+            while (0 < 1)
+            {
+
+
+
+                Console.WriteLine("Rock (1), Paper (2), Scissors (3)");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                int computersChoice = RandomChoice.Next(1, 4); ;
+                if (choice == 1 || choice == 2 || choice == 3)
+                {
+                    Console.Clear();
+
+                    if (choice == 1 && computersChoice == 1)
+                    {
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Tied!");
+
+                        Console.WriteLine("        _    ,-,    _                         _    ,-,    _");
+                        Console.WriteLine(" ,--, /: :\\/': :`\\/: :\\                   ,--, /: :\\/': :`\\/: :\\");
+                        Console.WriteLine("|`;  ' `,'   `.;    `: |                 |`;  ' `,'   `.;    `: | ");
+                        Console.WriteLine("|    |     |  '  |     |.                |    |     |  '  |     |.");
+                        Console.WriteLine("| :  |     |     |     ||                | :  |     |     |     ||");
+                        Console.WriteLine("| :. |  :  |  :  |  :  | \\               | :. |  :  |  :  |  :  | \\");
+                        Console.WriteLine(" \\__/: :.. : :.. | :.. |  )              \\__/: :.. : :.. | :.. |  )");
+                        Console.WriteLine("      `---',\\___/,\\___/ /'                    `---',\\___/,\\___/ /'");
+                        Console.WriteLine("           `==._ .. . /'                            `==._ .. . /'");
+                        Console.WriteLine("                `-::-'                                 `-::-'");
+
+                    }
+                    else if (choice == 1 && computersChoice == 2)
+                    {
+                        computersScore++;
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Lost!");
+
+                        Console.WriteLine("        _    ,-,    _                          /\"\\ ");
+                        Console.WriteLine(" ,--, /: :\\/': :`\\/: :\\                    /\"\\|\\./|/\"\\");
+                        Console.WriteLine("|`;  ' `,'   `.;    `: |                  |   |   |   | ");
+                        Console.WriteLine("|    |     |  '  |     |.                 |   |>~<|   |\"\\");
+                        Console.WriteLine("| :  |     |     |     ||                 |>~<|   |>~<|\\./|");
+                        Console.WriteLine("| :. |  :  |  :  |  :  | \\                |   |   |   |   |");
+                        Console.WriteLine(" \\__/: :.. : :.. | :.. |  )           /~T\\|   |   |   |   |");
+                        Console.WriteLine("      `---',\\___/,\\___/ /'            |_/ |   |   |   |   |");
+                        Console.WriteLine("           `==._ .. . /'              |   | ~   ~   ~ |   |");
+                        Console.WriteLine("                `-::-'                |~< |             ~ |");
+                        Console.WriteLine("                                      |   '               |");
+                        Console.WriteLine("                                      \\                   |");
+                        Console.WriteLine("                                       \\                 /");
+                        Console.WriteLine("                                        \\               /");
+                        Console.WriteLine("                                         \\.            /");
+                        Console.WriteLine("                                           |          |");
+                        Console.WriteLine("                                           |          |");
+
+                    }
+                    else if (choice == 1 && computersChoice == 3)
+                    {
+                        playersScore++;
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Won! ");
+
+                        Console.WriteLine("        _    ,-,    _                       __        __");
+                        Console.WriteLine(" ,--, /: :\\/': :`\\/: :\\                    ( _\\      /_ )");
+                        Console.WriteLine("|`;  ' `,'   `.;    `: |                    \\  \\    /  /");
+                        Console.WriteLine("|    |     |  '  |     |.                    \\ _\\  /_ / ");
+                        Console.WriteLine("| :  |     |     |     ||                     \\ _\\/_ /_ _");
+                        Console.WriteLine("| :. |  :  |  :  |  :  | \\                    |_____/_/ /|");
+                        Console.WriteLine(" \\__/: :.. : :.. | :.. |  )                   (  (_)__)J-)");
+                        Console.WriteLine("      `---',\\___/,\\___/ /'                    (  /`.,   /");
+                        Console.WriteLine("           `==._ .. . /'                       \\/  ;   /");
+                        Console.WriteLine("                `-::-'                          | === |");
+
+                    }
+                    else if (choice == 2 && computersChoice == 1)
+                    {
+                        playersScore++;
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Won! ");
+
+                        Console.WriteLine("         /\"\\                          _    ,-,    _");
+                        Console.WriteLine("     /\"\\|\\./|/\"\\               ,--, /: :\\/': :`\\/: :\\");
+                        Console.WriteLine("    |   |   |   |             |`;  ' `,'   `.;    `: |");
+                        Console.WriteLine("    |   |>~<|   |\"\\           |    |     |  '  |     |.");
+                        Console.WriteLine("    |>~<|   |>~<|\\./|         | :  |     |     |     ||");
+                        Console.WriteLine("    |   |   |   |   |         | :  |     |     |     ||");
+                        Console.WriteLine("/~T\\|   |   |   |   |         | :. |  :  |  :  |  :  | \\");
+                        Console.WriteLine("|_/ |   |   |   |   |          \\__/: :.. : :.. | :.. |  )");
+                        Console.WriteLine("|   | ~   ~   ~ |   |                `---',\\___/,\\___/ /'");
+                        Console.WriteLine("|~< |             ~ |                     `==._ .. . /'");
+                        Console.WriteLine("|   '               |                          `-::-'");
+                        Console.WriteLine("\\                   |");
+                        Console.WriteLine(" \\                 /");
+                        Console.WriteLine("  \\               /");
+                        Console.WriteLine("   \\.            /");
+                        Console.WriteLine("     |          |");
+                        Console.WriteLine("     |          |");
+                    }
+                    else if (choice == 2 && computersChoice == 2)
+                    {
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Tied!");
+
+                        Console.WriteLine("         /\"\\                                      /\"\\");
+                        Console.WriteLine("     /\"\\|\\./|/                                /\"\\|\\./|/\"\\");
+                        Console.WriteLine("    |   |   |   |                            |   |   |   |");
+                        Console.WriteLine("    |   |>~<|   |\"\\                          |   |>~<|   |\"\\");
+                        Console.WriteLine("    |>~<|   |>~<|\\./|                        |>~<|   |>~<|\\./|");
+                        Console.WriteLine("    |   |   |   |   |                        |   |   |   |   |");
+                        Console.WriteLine("/~T\\|   |   |   |   |                    /~T\\|   |   |   |   |");
+                        Console.WriteLine("|_/ |   |   |   |   |                    |_/ |   |   |   |   |");
+                        Console.WriteLine("|   | ~   ~   ~ |   |                    |   | ~   ~   ~ |   |");
+                        Console.WriteLine("|~< |             ~ |                    |~< |             ~ |");
+                        Console.WriteLine("|   '               |                    |   '               |");
+                        Console.WriteLine("\\                   |                    \\                   |");
+                        Console.WriteLine(" \\                 /                      \\                 /");
+                        Console.WriteLine("  \\               /                        \\               /");
+                        Console.WriteLine("   \\.            /                          \\.            /");
+                        Console.WriteLine("     |          |                             |          |");
+                        Console.WriteLine("     |          |                             |          |");
+                    }
+                    else if (choice == 2 && computersChoice == 3)
+                    {
+                        computersScore++;
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Lost!");
+
+                        Console.WriteLine("         /\"\\                        __        __");
+                        Console.WriteLine("     /\"\\|\\./|/\"\\                   ( _\\      /_ )");
+                        Console.WriteLine("    |   |   |   |                   \\  \\    /  /");
+                        Console.WriteLine("    |   |>~<|   |\"\\                  \\ _\\  /_ / ");
+                        Console.WriteLine("    |>~<|   |>~<|\\./|                 \\ _\\/_ /_ _");
+                        Console.WriteLine("    |   |   |   |   |                 |_____/_/ /|");
+                        Console.WriteLine("/~T\\|   |   |   |   |                 (  (_)__)J-)");
+                        Console.WriteLine("|_/ |   |   |   |   |                 (  /`.,   /");
+                        Console.WriteLine("|   | ~   ~   ~ |   |                  \\/  ;   /");
+                        Console.WriteLine("|~< |             ~ |                   | === |");
+                        Console.WriteLine("|   '               |");
+                        Console.WriteLine("\\                   |");
+                        Console.WriteLine(" \\                 /");
+                        Console.WriteLine("  \\               /");
+                        Console.WriteLine("   \\.            /");
+                        Console.WriteLine("     |          |");
+                        Console.WriteLine("     |          |");
+                    }
+                    else if (choice == 3 && computersChoice == 1)
+                    {
+                        computersScore++;
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Lost!");
+
+                        Console.WriteLine(" __         __                      _    ,-,    _");
+                        Console.WriteLine("( _\\      /_ )              ,--, /: :\\/': :`\\/: :\\");
+                        Console.WriteLine(" \\  \\    /  /              |`;  ' `,'   `.;    `: | ");
+                        Console.WriteLine("  \\ _\\  /_ /               |    |     |  '  |     |.");
+                        Console.WriteLine("   \\ _\\/_ /_ _             | :  |     |     |     ||");
+                        Console.WriteLine("   |_____/_/ /|            | :. |  :  |  :  |  :  | \\");
+                        Console.WriteLine("   (  (_)__)J-)             \\__/: :.. : :.. | :.. |  )");
+                        Console.WriteLine("   (  /`.,   /                   `---',\\___/,\\___/ /'");
+                        Console.WriteLine("    \\/  ;   /                         `==._ .. . /'");
+                        Console.WriteLine("     | === |                                `-::-'");
+                    }
+                    else if (choice == 3 && computersChoice == 2)
+                    {
+                        playersScore++;
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Won! ");
+
+                        Console.WriteLine(" __        __                             /\"\\");
+                        Console.WriteLine("( _\\      /_ )                        /\"\\|\\./|/\"\\");
+                        Console.WriteLine(" \\  \\    /  /                        |   |   |   |");
+                        Console.WriteLine("  \\ _\\  /_ /                         |   |>~<|   |\"\\");
+                        Console.WriteLine("   \\ _\\/_ /_ _                       |>~<|   |>~<|\\./|");
+                        Console.WriteLine("   |_____/_/ /|                  /~T\\|   |   |   |   |");
+                        Console.WriteLine("   (  (_)__)J-)                  |_/ |   |   |   |   |");
+                        Console.WriteLine("   (  /`.,   /                   |   | ~   ~   ~ |   |");
+                        Console.WriteLine("    \\/  ;   /                    |~< |             ~ |");
+                        Console.WriteLine("     | === |                     |   '               |");
+                        Console.WriteLine("                                 \\                   |");
+                        Console.WriteLine("                                  \\                 /");
+                        Console.WriteLine("                                   \\               /");
+                        Console.WriteLine("                                    \\.            /");
+                        Console.WriteLine("                                      |          |");
+                        Console.WriteLine("                                      |          |");
+                    }
+                    else if (choice == 3 && computersChoice == 3)
+                    {
+                        DisplayScoreBoard();
+                        Console.WriteLine("");
+                        Console.WriteLine("                            You Tied!");
+
+                        Console.WriteLine(" __        __             __        __");
+                        Console.WriteLine("( _\\      /_ )           ( _\\      /_ )");
+                        Console.WriteLine(" \\  \\    /  /             \\  \\    /  /");
+                        Console.WriteLine("  \\ _\\  /_ /               \\ _\\  /_ / ");
+                        Console.WriteLine("   \\ _\\/_ /_ _              \\ _\\/_ /_ _");
+                        Console.WriteLine("   |_____/_/ /|             |_____/_/ /|");
+                        Console.WriteLine("   (  (_)__)J-)             (  (_)__)J-)");
+                        Console.WriteLine("   (  /`.,   /              (  /`.,   /");
+                        Console.WriteLine("    \\/  ;   /                \\/  ;   /");
+                        Console.WriteLine("     | === |                  | === |");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid answer! Write the letter that coorosponds to the move you choose.");
+                }
+                if (computersScore == scoreToBeat)
+                {
+                    playerwon = false;
+                    break;
+                }
+                else if (playersScore == scoreToBeat)
+                {
+                    playerwon = true;
+                    break;
+                }
+
+            }
+            if (playerwon)
+            {
+
+                Console.Clear();
+                DisplayScoreBoard();
+                Console.WriteLine("");
+                Console.WriteLine("                       Player Wins The Game! ");
+                Console.WriteLine("");
+                Console.WriteLine("                 .       __..,,... .,,,,,.");
+                Console.WriteLine("                     ''''        ,'        ` .");
+                Console.WriteLine("                               ,'  ,.  ..      `  .");
+                Console.WriteLine("                               `.,'      ..           `");
+                Console.WriteLine("                     __..,.             .  ..     .");
+                Console.WriteLine("                            ` .       .  `.  .` `");
+                Console.WriteLine("                                ,  `.  `.  `._|,..");
+                Console.WriteLine("                                  .  `.  `..'");
+                Console.WriteLine("                                   ` -'`''");
+
+
+            }
+            else
+            {
+                Console.Clear();
+                DisplayScoreBoard();
+                Console.WriteLine("");
+                Console.WriteLine("                     Computer Wins The Game! ");
+                Console.WriteLine("");
+                Console.WriteLine("                     __..,,... .,,,,,.");
+                Console.WriteLine("                 ''''        ,'        ` .");
+                Console.WriteLine("                           ,'  ,.  ..      `  .");
+                Console.WriteLine("                           `.,'      ..           `");
+                Console.WriteLine("                 __..,.             .  ..     .");
+                Console.WriteLine("                        ` .       .  `.  .` `");
+                Console.WriteLine("                            ,  `.  `.  `._|,..");
+                Console.WriteLine("                              .  `.  `..'");
+                Console.WriteLine("                               ` -'`''");
+
+            }
+            Console.ReadKey();
+        }
+        static public void DisplayScoreBoard()
+        {
+
+                Console.WriteLine($"               ____________________________________");
+                Console.WriteLine($"              | Player's Score | Computer's score |");
+                Console.WriteLine($"              |________________|__________________|");
+                Console.WriteLine($"              |                |                  |");
+                Console.WriteLine($"              |       {playersScore}        |         {computersScore}        |");
+                Console.WriteLine($"              |________________|__________________|");
+            
+
+        }
+    } 
+}
